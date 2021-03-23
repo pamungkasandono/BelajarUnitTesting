@@ -4,7 +4,6 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import org.junit.Before
-import org.mockito.Mockito
 import org.mockito.Mockito.*
 
 class MainViewModelTest {
@@ -76,6 +75,4 @@ class MainViewModelTest {
         verify(cuboidModel).getLuasPermukaan()
         assertEquals(dmyLP, lp, 0.0001)
     }
-
-
 }

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyUnitTesting</string>
+    <string name="txt_panjang">Panjang</string>
+    <string name="txt_lebar">Lebar</string>
+    <string name="txt_tinggi">Tinggi</string>
+    <string name="txt_hitung">Hitung</string>
+    <string name="txt_hasilnya">Hasilnya</string>
+    <string name="txt_volume">Hitung Volume</string>
+    <string name="txt_luas_permukaan">Hitung Luas Permukaan</string>
+    <string name="txt_keliling">Hitung Keliling</string>
+</resources>

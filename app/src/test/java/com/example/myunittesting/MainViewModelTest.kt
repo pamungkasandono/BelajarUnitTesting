@@ -24,47 +24,53 @@ class MainViewModelTest {
     fun before() {
         cuboidModel = mock(CuboidModel::class.java)
         mainViewModel = MainViewModel(cuboidModel)
-        cuboidModel = CuboidModel()
-        mainViewModel = MainViewModel(cuboidModel)
-        mainViewModel.save(dmyLebar, dmyPanjang, dmyTinggi)
     }
 
     @Test
     fun tesVolume() {
+        cuboidModel = CuboidModel()
+        mainViewModel = MainViewModel(cuboidModel)
+        mainViewModel.save(dmyLebar, dmyPanjang, dmyTinggi)
         val volume = mainViewModel.getVolume()
         assertEquals(dmyVol, volume, 0.0001)
     }
 
     @Test
     fun tesLuasPermukaan() {
+        cuboidModel = CuboidModel()
+        mainViewModel = MainViewModel(cuboidModel)
+        mainViewModel.save(dmyLebar, dmyPanjang, dmyTinggi)
         val lP = mainViewModel.getLuasPermukaan()
         assertEquals(dmyLP, lP, 0.0001)
     }
 
     @Test
     fun tesKeliling () {
+        cuboidModel = CuboidModel()
+        mainViewModel = MainViewModel(cuboidModel)
+        mainViewModel.save(dmyLebar, dmyPanjang, dmyTinggi)
         val kell = mainViewModel.getKeliling()
         assertEquals(dmyKell, kell, 0.0001)
     }
 
-//    @Test
-//    open fun tesMockVolume() {
-//        `when`(mainViewModel.getVolume()).thenReturn(dmyVol)
-//        val vol = mainViewModel.getVolume()
-//        verify(cuboidModel).getVolume()
-//        assertEquals(dmyVol, vol, 0.0001)
-//    }
+    @Test
+    fun tesMockVolume() {
+        `when`(mainViewModel.getVolume()).thenReturn(dmyVol)
+        val vol = mainViewModel.getVolume()
+        verify(cuboidModel).getVolume()
+        assertEquals(dmyVol, vol, 0.0001)
+    }
 
     @Test
-    open fun tesMockKell() {
+    fun tesMockKell() {
         `when`(mainViewModel.getKeliling()).thenReturn(dmyKell)
         val kell = mainViewModel.getKeliling()
-        verify(cuboidModel.getKeliling())
+        verify(cuboidModel).getKeliling()
         assertEquals(dmyKell, kell, 0.0001)
     }
 
     @Test
-    open fun tesMockLP() {
+    fun tesMockLP() {
         `when`(mainViewModel.getLuasPermukaan()).thenReturn(dmyLP)
         val lp = mainViewModel.getLuasPermukaan()
         verify(cuboidModel).getLuasPermukaan()

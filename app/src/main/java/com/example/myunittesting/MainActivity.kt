@@ -14,15 +14,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
 
-//    private lateinit var _etPanjang: EditText
-//    private lateinit var _etLebar: EditText
-//    private lateinit var _etTinggi: EditText
-//    private lateinit var _btnHitung: Button
-//    private lateinit var _tvHasil: TextView
-//    private lateinit var _btnHitVolume: Button
-//    private lateinit var _btnHitLuasPermukaan: Button
-//    private lateinit var _btnHitKeliling: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,23 +21,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         _mainViewModel = MainViewModel(CuboidModel())
 
-//        _etLebar = findViewById(R.id.et_lebar)
-//        _etPanjang = findViewById(R.id.et_panjang)
-//        _etTinggi = findViewById(R.id.et_tinggi)
-//        _tvHasil = findViewById(R.id.tv_hasil)
-//        _btnHitung = findViewById(R.id.btn_hitung)
-//        _btnHitVolume = findViewById(R.id.btn_hit_volume)
-//        _btnHitLuasPermukaan = findViewById(R.id.btn_hit_luas_permukaan)
-//        _btnHitKeliling = findViewById(R.id.btn_hit_keliling)
-
-
-
         binding.btnHitung.setOnClickListener(this)
         binding.btnHitVolume.setOnClickListener(this)
         binding.btnHitLuasPermukaan.setOnClickListener(this)
         binding.btnHitKeliling.setOnClickListener(this)
-
-
     }
 
     override fun onClick(v: View?) {
@@ -85,12 +63,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
     private fun tampil() {
         binding.btnHitVolume.visibility = View.VISIBLE
         binding.btnHitLuasPermukaan.visibility = View.VISIBLE
         binding.btnHitKeliling.visibility = View.VISIBLE
         binding.btnHitung.visibility = View.GONE
     }
+
     private fun sembunyi() {
         binding.btnHitVolume.visibility = View.GONE
         binding.btnHitLuasPermukaan.visibility = View.GONE

@@ -9,12 +9,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_panjang" />
+        android:text="@string/txt_lebar" />
 
     <EditText
-        android:id="@+id/et_panjang"
+        android:id="@+id/et_lebar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -22,12 +22,12 @@
         android:lines="1" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_lebar" />
+        android:text="@string/txt_panjang" />
 
     <EditText
-        android:id="@+id/et_lebar"
+        android:id="@+id/et_panjang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
